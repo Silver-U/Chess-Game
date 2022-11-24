@@ -6,14 +6,22 @@ using System.Threading.Tasks;
 
 namespace Chess_Game.Models
 {
-    public class Piece
+    public abstract class Piece
     {
-        protected bool isCapture;
+        protected bool isCapture { get; set; }
         protected Position? position { get; set; }
-        public Piece(Position? position)
+        protected string? playerID { get;}
+        protected string pieceID { get; set; } 
+
+        protected Piece(Position position)
         {
             isCapture = false;
             this.position = position;
+        }
+
+        public Piece()
+        {
+            position = new Position();
         }
     }
 }

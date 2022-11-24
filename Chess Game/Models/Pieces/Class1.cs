@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Chess_Game.Models
+namespace Chess_Game.Models.Pieces
 {
-    internal class User
+    internal class Class1
     {
     }
 }

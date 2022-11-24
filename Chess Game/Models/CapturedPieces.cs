@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Chess_Game.Models
 {
-    internal class CapturedPieces
+    public class CapturedPieces
     {
+        public List<Piece> pieces { get;}
+
+        public CapturedPieces()
+        {
+            pieces = new List<Piece>();
+        }
     }
 }

@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace Chess_Game.Models.Pieces
 {
-    internal class PieceName
+    public class King : Piece
     {
+        public King() : base()
+        {
+
+        }
+
+        public King(Position position) : base(position)
+        {
+
+        }
     }
 }

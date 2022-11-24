@@ -8,10 +8,10 @@ namespace Chess_Game.Models
 {
     public class Position
     {
-        private byte x { get; set;}
-        private byte j { get; set; }
+        private int x { get; set;}
+        private int j { get; set; }
 
-        public Position(byte x, byte j)
+        public Position(int x, int j)
         {
             this.x = x;
             this.j = j;

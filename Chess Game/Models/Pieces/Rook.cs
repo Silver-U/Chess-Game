@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Chess_Game.Models
+namespace Chess_Game.Models.Pieces
 {
-    public class Pawn : Piece
+    public class Rook : Piece
     {
-        public Pawn() : base()
+        public Rook() : base()
         {
 
         }
 
-        public Pawn(Position position) : base(position)
+        public Rook(Position position) : base(position)
         {
 
         }
