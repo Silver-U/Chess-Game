@@ -21,9 +21,18 @@ namespace Chess_Game
     /// </summary>
     public partial class MainWindow : Window
     {
+        //public BitmapImage image { get; set; }        
+        //public Uri image { get; set; }
         public MainWindow()
         {
+            //image = new Uri(@"C:\Users\Silver\source\repos\Chess Game\Chess Game\Chess Game\Ressources\Images\yo.jpg", UriKind.Absolute);
             InitializeComponent();
+
+            //image = new BitmapImage(new Uri(@"C:\Users\Silver\source\repos\Chess Game\Chess Game\Chess Game\Ressources\Images\yo.jpg", UriKind.Absolute));
+            //po.Source = image;
+
+            //po.Source = image;
+
         }
     }
 }
