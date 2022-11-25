@@ -3,13 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Chess_Game" 
+        xmlns:local="clr-namespace:Chess_Game.Views" 
         mc:Ignorable="d"
         
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Image Name="picHolder" Stretch="Uniform" Source="images/yo.jpg"/>
-        <!--<local:PieceUC Height="400" Width="400"/>-->
-        <!--<Image Height="800" Width="800" x:Name="popo"/>-->
+        Title="MainWindow" Height="800" Width="800">
+    <Grid x:Name="grid">
+        <local:hiddenSandoxView></local:hiddenSandoxView>
     </Grid>
 </Window>

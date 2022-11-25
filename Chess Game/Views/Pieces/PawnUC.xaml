@@ -6,5 +6,5 @@
              xmlns:local="clr-namespace:Chess_Game.Views.Pieces"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Image Source="C:\Users\Silver\source\repos\Chess Game\Chess Game\Chess Game\Ressources\Images\Pieces\pawn.png" />
+    <Image Source="C:\Users\Silver\source\repos\Chess Game\Chess Game\Chess Game\Ressources\Images\Pieces\pawn.png" Stretch="Uniform"/>
 </UserControl>
