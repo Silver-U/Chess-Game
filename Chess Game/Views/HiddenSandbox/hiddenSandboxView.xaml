@@ -1,24 +1,41 @@
-﻿<UserControl x:Class="Chess_Game.Views.hiddenSandoxView"
+﻿<UserControl x:Class="Chess_Game.Views.hiddenSandboxView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Chess_Game.Views"
+             xmlns:vm="clr-namespace:Chess_Game.ViewModels"
+             xmlns:Behaviors="http://schemas.microsoft.com/xaml/behaviors"
              mc:Ignorable="d" 
-             Background="Wheat"
-             d:DesignHeight="450" d:DesignWidth="800">
+             Background="Wheat" 
+             d:DesignHeight="800" d:DesignWidth="800"
+             >
+    <UserControl.DataContext>
+        <vm:HiddenSandboxViewModel/>
+    </UserControl.DataContext>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="6*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition Height="4*"/>
+            <RowDefinition Height="6*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <local:SquaresBoardView Grid.Row="1" Grid.Column="1"/>
+
+        <Canvas x:Name="opti" Grid.Row="1" Grid.Column="1">
+            <Button Content="ibhuehbuoihboubhiu" Panel.ZIndex="1">
+                <Behaviors:Interaction.Triggers>
+                <Behaviors:EventTrigger EventName="Click">
+                    <Behaviors:InvokeCommandAction Command="{Binding DassCommand}"/>
+                </Behaviors:EventTrigger>
+            </Behaviors:Interaction.Triggers>
+            </Button>
+            <local:SquaresBoardView />
+        </Canvas>
+
 
         <Grid Grid.Row="0" Grid.Column="1">
             <Grid.ColumnDefinitions>
