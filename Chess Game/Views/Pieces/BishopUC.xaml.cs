@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Chess_Game.Views.HiddenSandbox;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,11 @@ namespace Chess_Game.Views.Pieces
     /// </summary>
     public partial class BishopUC : UserControl
     {
+
         public BishopUC()
         {
             InitializeComponent();
         }
+
     }
 }

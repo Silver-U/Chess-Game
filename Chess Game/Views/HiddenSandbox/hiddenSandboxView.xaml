@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:Chess_Game.Views"
              xmlns:vm="clr-namespace:Chess_Game.ViewModels"
              xmlns:Behaviors="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:hc="https://handyorg.github.io/handycontrol"
              mc:Ignorable="d" 
              Background="Wheat" 
              d:DesignHeight="800" d:DesignWidth="800"
@@ -13,64 +14,63 @@
     <UserControl.DataContext>
         <vm:HiddenSandboxViewModel/>
     </UserControl.DataContext>
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="6*"/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition Height="6*"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-
-        <Canvas x:Name="opti" Grid.Row="1" Grid.Column="1">
-            <Button Content="ibhuehbuoihboubhiu" Panel.ZIndex="1">
-                <Behaviors:Interaction.Triggers>
-                <Behaviors:EventTrigger EventName="Click">
-                    <Behaviors:InvokeCommandAction Command="{Binding DassCommand}"/>
-                </Behaviors:EventTrigger>
-            </Behaviors:Interaction.Triggers>
-            </Button>
-            <local:SquaresBoardView />
-        </Canvas>
-
-
-        <Grid Grid.Row="0" Grid.Column="1">
+    <Canvas x:Name="board">
+        <Behaviors:Interaction.Triggers>
+            <Behaviors:EventTrigger EventName="MouseRightButtonDown" SourceObject="{Binding ElementName=board}" >
+                <Behaviors:InvokeCommandAction Command="{Binding SpawnPiecesSelectorCommand}" CommandParameter="{Binding ElementName=board}"/>
+            </Behaviors:EventTrigger>
+        </Behaviors:Interaction.Triggers>
+        <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
+                <ColumnDefinition Width="6*"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition/>
+                <RowDefinition Height="6*"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-
-            <Label FontSize="20" 
-                   HorizontalAlignment="Center"
-                   Grid.ColumnSpan="2"          
-                   >
-                Experimental Sandbox
-            </Label>
-
-
-            <Grid Grid.Row="1" Grid.Column="1">
+            <local:SquaresBoardView Grid.Row="1" Grid.Column="1"/>
+            <Grid Grid.Row="0" Grid.Column="1">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition/>
+                    <RowDefinition/>
                 </Grid.RowDefinitions>
 
-                <ContentControl Grid.Column="2" x:Name="friendlyPiece"/>
-                <ContentControl Grid.Column="3" x:Name="enemyPiece"/>
+                <Label FontSize="20" 
+                   HorizontalAlignment="Center"
+                   Grid.ColumnSpan="2"          
+                   >
+                    Experimental Sandbox
+                </Label>
 
+
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <ContentControl Grid.Column="2" x:Name="friendlyPiece"/>
+                    <ContentControl Grid.Column="3" x:Name="enemyPiece"/>
+                    <Button Content="pieceSelector"  Command="{Binding DassCommand}" CommandParameter="{Binding ElementName=board}"/>
+                    <ToggleButton Style="{StaticResource tgb}" Grid.Column="4" IsChecked="{Binding Path=IsEditMode, Mode=TwoWay}">
+                        
+                    </ToggleButton>
+
+                </Grid>
             </Grid>
         </Grid>
-    </Grid>
+    </Canvas>
 </UserControl>

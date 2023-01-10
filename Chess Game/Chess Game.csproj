@@ -9,11 +9,34 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Ressources\Images\Pieces\" />
+    <None Remove="Ressources\Images\Pieces\bishop.png" />
+    <None Remove="Ressources\Images\Pieces\king.png" />
+    <None Remove="Ressources\Images\Pieces\knight.png" />
+    <None Remove="Ressources\Images\Pieces\pawn.png" />
+    <None Remove="Ressources\Images\Pieces\queen.png" />
+    <None Remove="Ressources\Images\Pieces\rook.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Ressources\Images\Pieces\bishop.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ressources\Images\Pieces\king.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ressources\Images\Pieces\knight.png" />
+    <EmbeddedResource Include="Ressources\Images\Pieces\pawn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ressources\Images\Pieces\queen.png" />
+    <EmbeddedResource Include="Ressources\Images\Pieces\rook.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
+    <PackageReference Include="HandyControl" Version="3.4.0" />
     <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39" />
   </ItemGroup>
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Chess_Game.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,15 +13,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Chess_Game.Views.HiddenSandbox
 {
     /// <summary>
     /// Interaction logic for UserControl1.xaml
     /// </summary>
-    public partial class UserControl1 : UserControl
+    public partial class WheelPiecesSelector : UserControl
     {
-        public UserControl1()
+        public WheelPiecesSelector()
         {
             InitializeComponent();
         }

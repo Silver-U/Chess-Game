@@ -1,0 +1,62 @@
+﻿<UserControl x:Class="Chess_Game.Views.HiddenSandbox.WheelPiecesSelector"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Chess_Game.Views.HiddenSandbox"
+             xmlns:pieces="clr-namespace:Chess_Game.Views.Pieces"
+             xmlns:vm="clr-namespace:Chess_Game.ViewModels"
+             mc:Ignorable="d" 
+             xmlns:Behaviors="http://schemas.microsoft.com/xaml/behaviors"
+             d:DesignHeight="360" d:DesignWidth="360"
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             >
+    <UserControl.DataContext>
+        <vm:PiecesSelectorViewModel/>
+    </UserControl.DataContext>
+    <StackPanel>
+        <hc:CirclePanel Diameter="300" OffsetAngle="195" KeepVertical="True">
+            <Button Command="{Binding SelectPieceCommand}" CommandParameter="{Binding ElementName=bishopPl, Path=Name}"  x:Name="bishopPl"  Background="Red" Padding="0 0 0 0" Height="40" Width="40" >
+                <Image Source="C:\Users\Silver\source\repos\Chess Game\Chess Game\Chess Game\Ressources\Images\Pieces\bishop.png" />
+            </Button>
+            <Button Command="{Binding SelectPieceCommand}" CommandParameter="{Binding ElementName=kingPl, Path=Name}"  x:Name="kingPl" Background="Transparent" Height="40" Width="40">
+                <Image Source="C:\Users\Silver\source\repos\Chess Game\Chess Game\Chess Game\Ressources\Images\Pieces\king.png" />
+            </Button>
+            <Button Command="{Binding SelectPieceCommand}" CommandParameter="{Binding ElementName=knightPl, Path=Name}"  x:Name="knightPl" Height="40" Width="40" Background="Transparent">
+                <Image Source="C:\Users\Silver\source\repos\Chess Game\Chess Game\Chess Game\Ressources\Images\Pieces\knight.png" />
+            </Button>
+            <Button Command="{Binding SelectPieceCommand}" CommandParameter="{Binding ElementName=pawnPl, Path=Name}"  x:Name="pawnPl" Height="40" Width="40" Background="Transparent">
+                <Image Source="C:\Users\Silver\source\repos\Chess Game\Chess Game\Chess Game\Ressources\Images\Pieces\pawn.png" />
+            </Button>
+            <Button Command="{Binding SelectPieceCommand}" CommandParameter="{Binding ElementName=queenPl, Path=Name}"  x:Name="queenPl" Height="40" Width="40" Background="Transparent">
+                <Image Source="C:\Users\Silver\source\repos\Chess Game\Chess Game\Chess Game\Ressources\Images\Pieces\queen.png" />
+            </Button>
+            <Button Command="{Binding SelectPieceCommand}" CommandParameter="{Binding ElementName=rookPl, Path=Name}"  x:Name="rookPl" Height="40" Width="40" Background="Pink">
+                <Image Source="C:\Users\Silver\source\repos\Chess Game\Chess Game\Chess Game\Ressources\Images\Pieces\rook.png" />
+            </Button>
+
+            <Button Command="{Binding SelectPieceCommand}" CommandParameter="{Binding ElementName=bishopOp, Path=Name}"  x:Name="bishopOp"  Background="Yellow" Padding="0 0 0 0" Height="40" Width="40" >
+                <Image Source="C:\Users\Silver\source\repos\Chess Game\Chess Game\Chess Game\Ressources\Images\Pieces\bishop.png" />
+            </Button>
+            <Button Command="{Binding SelectPieceCommand}" CommandParameter="{Binding ElementName=kingOp, Path=Name}"   x:Name="kingOp" Background="Transparent" Height="40" Width="40" Padding="0 0 0 0">
+                <Image Source="C:\Users\Silver\source\repos\Chess Game\Chess Game\Chess Game\Ressources\Images\Pieces\king.png" />
+            </Button>
+            <Button Command="{Binding SelectPieceCommand}" CommandParameter="{Binding ElementName=knightOp, Path=Name}"  x:Name="knightOp" Height="40" Width="40" Background="Transparent" Padding="0 0 0 0">
+                <Image Source="C:\Users\Silver\source\repos\Chess Game\Chess Game\Chess Game\Ressources\Images\Pieces\knight.png" />
+            </Button>
+            <Button Command="{Binding SelectPieceCommand}" CommandParameter="{Binding ElementName=pawnOp, Path=Name}"  x:Name="pawnOp" Height="40" Width="40" Background="Transparent" Padding="0 0 0 0">
+                <Image Source="C:\Users\Silver\source\repos\Chess Game\Chess Game\Chess Game\Ressources\Images\Pieces\pawn.png" />
+            </Button>
+            <Button Command="{Binding SelectPieceCommand}" CommandParameter="{Binding ElementName=queenOp, Path=Name}"  x:Name="queenOp" Height="40" Width="40" Background="Transparent" Padding="0 0 0 0">
+                <Image Source="C:\Users\Silver\source\repos\Chess Game\Chess Game\Chess Game\Ressources\Images\Pieces\pawn.png" />
+            </Button>
+            <Button Command="{Binding SelectPieceCommand}" CommandParameter="{Binding ElementName=rookOp, Path=Name}"  x:Name="rookOp" Height="40" Width="40" Background="GreenYellow" Padding="0 0 0 0">
+                <Image Source="C:\Users\Silver\source\repos\Chess Game\Chess Game\Chess Game\Ressources\Images\Pieces\rook.png" />
+            </Button>
+
+
+        </hc:CirclePanel>
+    </StackPanel>
+    
+</UserControl>
+ 
