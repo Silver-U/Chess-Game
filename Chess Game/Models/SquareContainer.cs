@@ -9,13 +9,20 @@ namespace Chess_Game.Models
     public class SquareContainer
     {   
         public Piece? piece { get; set;}
-        public Position position { get; private set;}
-        public string id { get; private set; }
+        public Position position { get;}
+        public string id { get; }
 
-        public SquareContainer(Position position, string id)
+        public SquareContainer(Position position, String id)
         {
             this.position = position;
             this.id = id;   
         }
+
+        public SquareContainer(int x, int y, String id)
+        {
+            this.position = new Position(x,y);
+            this.id = id;
+        }
     }
 }
+

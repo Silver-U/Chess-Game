@@ -21,6 +21,19 @@ namespace Chess_Game.Views
     /// </summary>
     public partial class SquaresBoardView : UserControl
     {
+
+
+        public SquaresBoard Board
+        {
+            get { return (SquaresBoard)GetValue(boardProperty); }
+            set { SetValue(boardProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for board.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty boardProperty =
+            DependencyProperty.Register("Board", typeof(SquaresBoard), typeof(SquaresBoard), new PropertyMetadata(0));
+
+
         private const int nbSquare = 8;
         public SquaresBoardView()
         {
@@ -34,7 +47,7 @@ namespace Chess_Game.Views
             {
                 for (int j = 0; j < nbSquare; j++)
                 {
-                    var square = GetSquare();
+                    var square = GetSquare(i, j, generateSquareId(i, j));
                     Grid.SetRow(square, i);
                     Grid.SetColumn(square, j);
                     squares.Children.Add(square);
@@ -43,9 +56,50 @@ namespace Chess_Game.Views
 
         }
 
-        private static SquareContainerView GetSquare()
+        private static SquareContainerView GetSquare(int x, int y, String id)
         {
-            return new SquareContainerView();
+            var squareContainer = new SquareContainerView();
+            Binding myBinding = new Binding("container");
+            myBinding.Source = new SquareContainer(x, y, id);
+            BindingOperations.SetBinding(squareContainer, SquareContainerView.containerProperty, myBinding);
+            return squareContainer;
+        }
+
+        private string generateSquareId(int x, int j)
+        {
+            string id = "";
+
+            switch (x)
+            {
+                case 0:
+                    id += 'a';
+                    break;
+                case 1:
+                    id += 'b';
+                    break;
+                case 2:
+                    id += 'c';
+                    break;
+                case 3:
+                    id += 'd';
+                    break;
+                case 4:
+                    id += 'e';
+                    break;
+                case 5:
+                    id += 'f';
+                    break;
+                case 6:
+                    id += 'g';
+                    break;
+                case 7:
+                    id += 'h';
+                    break;
+            }
+
+            id += j++;
+
+            return id;
         }
     }    
 }

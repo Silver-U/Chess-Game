@@ -14,24 +14,39 @@ using System.Windows.Input;
 using System.Windows;
 using CommunityToolkit.Mvvm.ComponentModel;
 using Chess_Game.Views.HiddenSandbox;
+using CommunityToolkit.Mvvm.Messaging;
+using Chess_Game.Messenger;
 
 namespace Chess_Game.ViewModels;
 
-public partial class HiddenSandboxViewModel : ObservableObject
+public partial class HiddenSandboxViewModel : ObservableObject, IRecipient<SelectedPieceMessenger>
 {
     [ObservableProperty]
     public bool isEditMode;
 
+    public String playerPieceEdit { get; set; } 
+    public String opponentPieceEdit { get; set; }
+
+    [ObservableProperty]
+    public SquaresBoard? board;
+
     public HiddenSandboxViewModel()
     {
+        WeakReferenceMessenger.Default.Register<SelectedPieceMessenger>(this);
     }
 
-    public void SpawnPieceSelector(object sender, MouseButtonEventArgs e)
+    public void Receive(SelectedPieceMessenger message)
     {
-        if(e.ChangedButton == MouseButton.Middle && e.ButtonState == MouseButtonState.Pressed)
-        {
-        }
         throw new NotImplementedException();
+    }
+
+    public void SpawnPieceSelector(String name)
+    {
+        if(name.EndsWith("P"))
+        {
+            name = name.Remove(name.Length - 1);
+
+        }
     }
 
     [RelayCommand]

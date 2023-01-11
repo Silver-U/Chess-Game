@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Chess_Game.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,23 @@ namespace Chess_Game.Views
     /// </summary>
     public partial class SquareContainerView : UserControl
     {
+
+
+
+
+        public SquareContainer container
+        {
+            get { return (SquareContainer)GetValue(containerProperty); }
+            set { SetValue(containerProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for container.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty containerProperty =
+            DependencyProperty.Register("container", typeof(SquareContainer), typeof(SquareContainerView), new PropertyMetadata(0));
+
+
+
+
         public SquareContainerView()
         {
             InitializeComponent();
