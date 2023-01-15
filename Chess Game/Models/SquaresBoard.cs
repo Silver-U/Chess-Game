@@ -64,5 +64,10 @@ namespace Chess_Game.Models
 
             return id;
         }
+
+        public SquareContainer GetSquareContainerByID(String id)
+        {
+            return squares.GetValueOrDefault(id);
+        }
     }
 }

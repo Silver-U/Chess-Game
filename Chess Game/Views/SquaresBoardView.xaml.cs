@@ -1,6 +1,7 @@
 ﻿using Chess_Game.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,7 +24,7 @@ namespace Chess_Game.Views
     {
 
 
-        public SquaresBoard Board
+        public SquaresBoard board
         {
             get { return (SquaresBoard)GetValue(boardProperty); }
             set { SetValue(boardProperty, value); }
@@ -31,14 +32,17 @@ namespace Chess_Game.Views
 
         // Using a DependencyProperty as the backing store for board.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty boardProperty =
-            DependencyProperty.Register("Board", typeof(SquaresBoard), typeof(SquaresBoard), new PropertyMetadata(0));
+            DependencyProperty.Register("board", typeof(SquaresBoard), typeof(SquaresBoardView), new PropertyMetadata(null));
+
 
 
         private const int nbSquare = 8;
+
         public SquaresBoardView()
         {
             InitializeComponent();
-            initialisation();
+            //initialisation();
+
         }
 
         private void initialisation()
@@ -47,21 +51,21 @@ namespace Chess_Game.Views
             {
                 for (int j = 0; j < nbSquare; j++)
                 {
-                    var square = GetSquare(i, j, generateSquareId(i, j));
+                    var id = generateSquareId(i, j);
+                    var square = GetSquare(i, j, id, board.GetSquareContainerByID(id));
                     Grid.SetRow(square, i);
                     Grid.SetColumn(square, j);
                     squares.Children.Add(square);
                 }
-            }
-
+            }            
         }
 
-        private static SquareContainerView GetSquare(int x, int y, String id)
+        private static SquareContainerView GetSquare(int x, int y, String id, SquareContainer square)
         {
             var squareContainer = new SquareContainerView();
-            Binding myBinding = new Binding("container");
-            myBinding.Source = new SquareContainer(x, y, id);
-            BindingOperations.SetBinding(squareContainer, SquareContainerView.containerProperty, myBinding);
+            Binding myBinding = new Binding();
+            myBinding.Source = square;
+            squareContainer.SetBinding(SquareContainerView.containerProperty, myBinding);
             return squareContainer;
         }
 
@@ -100,6 +104,11 @@ namespace Chess_Game.Views
             id += j++;
 
             return id;
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            initialisation();
         }
     }    
 }

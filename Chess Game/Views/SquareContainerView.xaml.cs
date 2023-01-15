@@ -33,7 +33,7 @@ namespace Chess_Game.Views
 
         // Using a DependencyProperty as the backing store for container.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty containerProperty =
-            DependencyProperty.Register("container", typeof(SquareContainer), typeof(SquareContainerView), new PropertyMetadata(0));
+            DependencyProperty.Register("container", typeof(SquareContainer), typeof(SquareContainerView), new PropertyMetadata(null));
 
 
 

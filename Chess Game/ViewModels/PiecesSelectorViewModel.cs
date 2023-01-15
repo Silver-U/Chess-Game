@@ -1,4 +1,6 @@
-﻿using CommunityToolkit.Mvvm.Input;
+﻿using Chess_Game.Messenger;
+using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.Messaging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +20,8 @@ namespace Chess_Game.ViewModels
         [RelayCommand]
         public void SelectPiece(String name)
         {
-            MessageBox.Show(name.Substring(0, name.Length - 2));
+            //Console.WriteLine(name);
+            WeakReferenceMessenger.Default.Send(new SelectedPieceMessenger(name));
         }
     }
 }
