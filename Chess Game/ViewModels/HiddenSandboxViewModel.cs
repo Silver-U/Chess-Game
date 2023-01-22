@@ -25,7 +25,7 @@ public partial class HiddenSandboxViewModel : ObservableObject, IRecipient<Selec
     [ObservableProperty]
     public bool? isEditMode;
 
-    public Piece selectedPiece { get; set; }
+    public Piece? selectedPiece { get; set; }
 
     public String? playerPieceEdit { get; set; } 
     public String? opponentPieceEdit { get; set; }
@@ -61,6 +61,7 @@ public partial class HiddenSandboxViewModel : ObservableObject, IRecipient<Selec
         {
             name = name.Remove(name.Length - 1);
         }
+
     }
 
     [RelayCommand]
@@ -93,9 +94,4 @@ public partial class HiddenSandboxViewModel : ObservableObject, IRecipient<Selec
     {
         return Convert.ChangeType(obj, castTo);
     }
-    //var pop = new Popup();
-    //var block = new TextBlock();
-    //block.Text = "dasdasd";
-    //    pop.Child = block;
-    //    pop.IsOpen = true;
 }

@@ -18,20 +18,20 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Ressources\Images\Pieces\bishop.png">
+    <Resource Include="Ressources\Images\Pieces\bishop.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ressources\Images\Pieces\king.png">
+    </Resource>
+    <Resource Include="Ressources\Images\Pieces\king.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ressources\Images\Pieces\knight.png" />
-    <EmbeddedResource Include="Ressources\Images\Pieces\pawn.png">
+    </Resource>
+    <Resource Include="Ressources\Images\Pieces\knight.png" />
+    <Resource Include="Ressources\Images\Pieces\pawn.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ressources\Images\Pieces\queen.png" />
-    <EmbeddedResource Include="Ressources\Images\Pieces\rook.png">
+    </Resource>
+    <Resource Include="Ressources\Images\Pieces\queen.png" />
+    <Resource Include="Ressources\Images\Pieces\rook.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>

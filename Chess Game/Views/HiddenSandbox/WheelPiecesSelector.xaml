@@ -17,41 +17,41 @@
     <StackPanel>
         <hc:CirclePanel Diameter="300" OffsetAngle="195" KeepVertical="True">
             <Button Command="{Binding SelectPieceCommand}" CommandParameter="{Binding ElementName=bishopP, Path=Name}"  x:Name="bishopP"  Background="Red" Padding="0 0 0 0" Height="40" Width="40" >
-                <Image Source="C:\Users\Silver\source\repos\Chess Game\Chess Game\Chess Game\Ressources\Images\Pieces\bishop.png" />
+                <Image Source="\Ressources\Images\Pieces\bishop.png" />
             </Button>
             <Button Command="{Binding SelectPieceCommand}" CommandParameter="{Binding ElementName=kingP, Path=Name}"  x:Name="kingP" Background="RosyBrown" Height="40" Width="40">
-                <Image Source="C:\Users\Silver\source\repos\Chess Game\Chess Game\Chess Game\Ressources\Images\Pieces\king.png" />
+                <Image Source="\Ressources\Images\Pieces\king.png" />
             </Button>
             <Button Command="{Binding SelectPieceCommand}" CommandParameter="{Binding ElementName=knightP, Path=Name}"  x:Name="knightP" Height="40" Width="40" Background="Maroon">
-                <Image Source="C:\Users\Silver\source\repos\Chess Game\Chess Game\Chess Game\Ressources\Images\Pieces\knight.png" />
+                <Image Source="\Ressources\Images\Pieces\knight.png" />
             </Button>
             <Button Command="{Binding SelectPieceCommand}" CommandParameter="{Binding ElementName=pawnP, Path=Name}"  x:Name="pawnP" Height="40" Width="40" Background="GhostWhite">
-                <Image Source="C:\Users\Silver\source\repos\Chess Game\Chess Game\Chess Game\Ressources\Images\Pieces\pawn.png" />
+                <Image Source="\Ressources\Images\Pieces\pawn.png" />
             </Button>
             <Button Command="{Binding SelectPieceCommand}" CommandParameter="{Binding ElementName=queenP, Path=Name}"  x:Name="queenP" Height="40" Width="40" Background="Tomato">
-                <Image Source="C:\Users\Silver\source\repos\Chess Game\Chess Game\Chess Game\Ressources\Images\Pieces\queen.png" />
+                <Image Source="\Ressources\Images\Pieces\queen.png" />
             </Button>
             <Button Command="{Binding SelectPieceCommand}" CommandParameter="{Binding ElementName=rookP, Path=Name}"  x:Name="rookP" Height="40" Width="40" Background="Pink">
-                <Image Source="C:\Users\Silver\source\repos\Chess Game\Chess Game\Chess Game\Ressources\Images\Pieces\rook.png" />
+                <Image Source="\Ressources\Images\Pieces\rook.png" />
             </Button>
 
             <Button Command="{Binding SelectPieceCommand}" CommandParameter="{Binding ElementName=bishopO, Path=Name}"  x:Name="bishopO"  Background="Yellow" Padding="0 0 0 0" Height="40" Width="40" >
-                <Image Source="C:\Users\Silver\source\repos\Chess Game\Chess Game\Chess Game\Ressources\Images\Pieces\bishop.png" />
+                <Image Source="\Ressources\Images\Pieces\bishop.png" />
             </Button>
             <Button Command="{Binding SelectPieceCommand}" CommandParameter="{Binding ElementName=kingO, Path=Name}"   x:Name="kingO" Background="Salmon" Height="40" Width="40" Padding="0 0 0 0">
-                <Image Source="C:\Users\Silver\source\repos\Chess Game\Chess Game\Chess Game\Ressources\Images\Pieces\king.png" />
+                <Image Source="\Ressources\Images\Pieces\king.png" />
             </Button>
             <Button Command="{Binding SelectPieceCommand}" CommandParameter="{Binding ElementName=knightO, Path=Name}"  x:Name="knightO" Height="40" Width="40" Background="Khaki" Padding="0 0 0 0">
-                <Image Source="C:\Users\Silver\source\repos\Chess Game\Chess Game\Chess Game\Ressources\Images\Pieces\knight.png" />
+                <Image Source="\Ressources\Images\Pieces\knight.png" />
             </Button>
             <Button Command="{Binding SelectPieceCommand}" CommandParameter="{Binding ElementName=pawnO, Path=Name}"  x:Name="pawnO" Height="40" Width="40" Background="PaleVioletRed" Padding="0 0 0 0">
-                <Image Source="C:\Users\Silver\source\repos\Chess Game\Chess Game\Chess Game\Ressources\Images\Pieces\pawn.png" />
+                <Image Source="\Ressources\Images\Pieces\pawn.png" />
             </Button>
             <Button Command="{Binding SelectPieceCommand}" CommandParameter="{Binding ElementName=queenO, Path=Name}"  x:Name="queenO" Height="40" Width="40" Background="Beige" Padding="0 0 0 0">
-                <Image Source="C:\Users\Silver\source\repos\Chess Game\Chess Game\Chess Game\Ressources\Images\Pieces\pawn.png" />
+                <Image Source="\Ressources\Images\Pieces\pawn.png" />
             </Button>
             <Button Command="{Binding SelectPieceCommand}" CommandParameter="{Binding ElementName=rookO, Path=Name}"  x:Name="rookO" Height="40" Width="40" Background="GreenYellow" Padding="0 0 0 0">
-                <Image Source="C:\Users\Silver\source\repos\Chess Game\Chess Game\Chess Game\Ressources\Images\Pieces\rook.png" />
+                <Image Source="\Ressources\Images\Pieces\rook.png" />
             </Button>
         </hc:CirclePanel>
     </StackPanel>

@@ -7,5 +7,5 @@
              mc:Ignorable="d" 
              
              d:DesignHeight="60" d:DesignWidth="60">
-    <Image Source="C:\Users\Silver\source\repos\Chess Game\Chess Game\Chess Game\Ressources\Images\Pieces\bishop.png" Stretch="Uniform"/>
+    <Image Source="\Ressources\Images\Pieces\bishop.png" Stretch="Uniform"/>
 </UserControl>

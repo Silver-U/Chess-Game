@@ -10,15 +10,12 @@ namespace Chess_Game.Models.Pieces
 {
     public class Knight : Piece
     {
-        public BitmapImage image { get; set; }
         public Knight() : base()
         {
-            image = new BitmapImage(new Uri(@"C:\Users\Silver\source\repos\Chess Game\Chess Game\Chess Game\Ressources\Images\yo.jpg", UriKind.Absolute));
         }
 
         public Knight(Position position) : base(position)
         {
-            image = new BitmapImage(new Uri(@"C:\Users\Silver\source\repos\Chess Game\Chess Game\Chess Game\Ressources\Images\yo.jpg", UriKind.Absolute));
 
         }
     }
